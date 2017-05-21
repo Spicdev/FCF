@@ -43,14 +43,14 @@
                     <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
                 </p>
                 <div class="jumbotron">
-                    <h1>Dispatcher</h1>
-                    <p>藉由串接 Api.ai 來分析對話的分支</p>
+                    <h1>Keyword Extraction</h1>
+                    <p>藉由串接 Api.ai 來分析使用者傳入的訊息，並擷取當中的關鍵字</p>
                 </div>
                 <div class="row">
                     <div>
                         <h2>使用範例</h2>
-                        <img src="img/06.png" />
-                        <p>Dispatcher Node 會將接收到的訊息傳至 Api.ai 進行分析，依 Api.ai 回傳回來 Action 欄位的值決定接續對話的走向</p>
+                        <img src="img/05.png" />
+                        <p>Keyword Extraction Node 會將接收到的訊息傳至 Api.ai 進行分析，並於 Api.ai 端進行設定好的關鍵字擷取，並將結果回傳至後續串接的 Node 處理。依上圖所示，後續會將關鍵字存入 Frame Node 並送至 Pull Service Node 查詢</p>
                     </div>
                 </div>
                 <!--/row-->
@@ -61,8 +61,8 @@
                 <div class="list-group">
                     <a href="index.html" class="list-group-item">IM Bridge</a>
                     <a href="Message.html" class="list-group-item">Message</a>
-                    <a href="Dispatcher.html" class="list-group-item active">Dispatcher</a>
-                    <a href="Keyword_Extraction.html" class="list-group-item">Keyword Extraction</a>
+                    <a href="Dispatcher.html" class="list-group-item">Dispatcher</a>
+                    <a href="Keyword_Extraction.html" class="list-group-item active">Keyword Extraction</a>
                     <a href="Data_Collection.html" class="list-group-item">Data Collection</a>
                     <a href="Frame.html" class="list-group-item">Frame</a>
                     <a href="Service_Bridge.html" class="list-group-item">Service Bridge</a>
