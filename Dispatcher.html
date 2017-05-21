@@ -43,22 +43,14 @@
           <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
         </p>
         <div class="jumbotron">
-          <h1>Message</h1>
-          <p>用來傳送訊息至通訊平台，目前包含二種 Node：Message、Button</p>
+          <h1>Dispatcher</h1>
+          <p>藉由串接 Api.ai 來分析對話的分支</p>
         </div>
         <div class="row">
           <div>
-            <h2>Message</h2>
-            <p>用來純文字訊息</p>
-            <h2>Button</h2>
-            <p>用來傳送可點選的訊息</p><hr>
             <h2>使用範例</h2>
-            <img src="img/01.png" />
-            <p>Message Node 內部可以設定傳送的訊息，再藉由 Facebook Out Node 送出至 Facebook 通訊平台</p>
-            <img src="img/02.png" />
-            <p>Message Node 可將上一個 Node 傳來的 payload 資料藉由 Message Node 轉成文字訊息。如上圖所示，Push Service Node 回傳的資料會存入 payload 裡，Message Node 不需再做任何設定，即可將 Push Service Node 回傳的資料藉由 Facebook Notification Node 送出至 Facebook 通訊平台</p>
-            <img src="img/03.png" />
-            <p>Button Node 跟 Message Node 類似，在內部設定多組選項，再藉由 Facebook Out Node 送出至 Facebook 通訊平台供使用者點選回覆</p>
+            <img src="img/06.png" />
+            <p>Dispatcher Node 會將接收到的訊息傳至 Api.ai 進行分析，依 Api.ai 回傳回來 Action 欄位的值決定接續對話的走向</p>
           </div>
         </div>
         <!--/row-->
@@ -68,8 +60,8 @@
       <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
         <div class="list-group">
           <a href="index.html" class="list-group-item">IM Bridge</a>
-          <a href="Message.html" class="list-group-item active">Message</a>
-          <a href="Dispatcher.html" class="list-group-item">Dispatcher</a>
+          <a href="Message.html" class="list-group-item">Message</a>
+          <a href="Dispatcher.html" class="list-group-item active">Dispatcher</a>
           <a href="Keyword_Extraction.html" class="list-group-item">Keyword Extraction</a>
           <a href="Data_Collection.html" class="list-group-item">Data Collection</a>
           <a href="Frame.html" class="list-group-item">Frame</a>
