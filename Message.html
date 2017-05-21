@@ -43,25 +43,22 @@
           <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
         </p>
         <div class="jumbotron">
-          <h1>IM Bridge</h1>
-          <p>用來連接通訊平台，目前包含三種 Node：Facebook In、Facebook Out、Facebook Notification</p>
+          <h1>Message</h1>
+          <p>用來傳送文字訊息至通訊平台，目前包含二種 Node：Message、Button</p>
         </div>
         <div class="row">
           <div>
-            <h2>Facebook In</h2>
-            <p>用來接收從 Facebook 通訊平台送來的訊息</p>
-            <h2>Facebook Out</h2>
-            <p>用來將訊息傳送至 Facebook 通訊平台</p>
-            <h2>Facebook Notification</h2>
-            <p>用來主動推播訊息至 Facebook 通訊平台</p>
-            <hr>
+            <h2>Message</h2>
+            <p>用來純文字訊息</p>
+            <h2>Button</h2>
+            <p>用來傳送可點選的訊息</p><hr>
             <h2>使用範例</h2>
             <img src="img/01.png" />
-            <p>任何於 Facebook 通訊平台輸入的訊息會被 Facebook In Node 接收，之後會將 Message Node 裡設定的訊息藉由 Facebook Out Node 送出至 Facebook 通訊平台</p>
+            <p>Message Node 內部可以設定傳送的訊息，再藉由 Facebook Out Node 送出至 Facebook 通訊平台</p>
             <img src="img/02.png" />
-            <p>當外部服務呼叫 Push Service Node 後，會將 Message Node 裡設定的訊息藉由 Facebook Notification Node 傳送至 Facebook 通訊平台</p>
-            <img src="img/04.png" />
-            <p>Facebook Out Node 後可繼續串接 Node 來達到持續對話。第一組 Facebook Out Node 將訊息送出後，會等待使用者繼續輸入訊息，然後將第二組 Message Node 內設定的訊息送出</p>
+            <p>Message Node 可將上一個 Node 傳來的 payload 資料藉由 Message Node 轉成文字訊息。如上圖所示，Push Service Node 回傳的資料會存入 payload 裡，Message Node 不需再做任何設定，即可將 Push Service Node 回傳的資料藉由 Facebook Notification Node 送出至 Facebook 通訊平台</p>
+            <img src="img/03.png" />
+            <p>跟 Message Node 類似，可在內部設定多組選項，再藉由 Facebook Out Node 送出至 Facebook 通訊平台供使用者點選回覆</p>
           </div>
         </div>
         <!--/row-->
@@ -70,8 +67,8 @@
 
       <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
         <div class="list-group">
-          <a href="index.html" class="list-group-item active">IM Bridge</a>
-          <a href="Message.html" class="list-group-item">Message</a>
+          <a href="index.html" class="list-group-item">IM Bridge</a>
+          <a href="Message.html" class="list-group-item active">Message</a>
           <a href="Dispatcher" class="list-group-item">Dispatcher</a>
           <a href="Keyword_Extraction.html" class="list-group-item">Keyword Extraction</a>
           <a href="Data_Collection.html" class="list-group-item">Data Collection</a>
