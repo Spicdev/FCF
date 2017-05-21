@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>FCF</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-inverse bg-inverse">
+        <a class="navbar-brand" href="index.html">FCF (Flow-based Chatbot Framework)</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row row-offcanvas row-offcanvas-right">
+
+            <div class="col-12 col-md-9">
+                <p class="float-right d-md-none">
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
+                </p>
+                <div class="jumbotron">
+                    <h1>Service Bridge</h1>
+                    <p>用來連接外部服務，目前包含二種 Node：Pull Service、Push Service</p>
+                </div>
+                <div class="row">
+                    <div>
+                        <h2>Pull Service</h2>
+                        <p>向外部服務請求資料</p>
+                        <h2>Push Service</h2>
+                        <p>供外部服務主動推送通知</p>
+                        <hr>
+                        <h2>使用範例</h2>
+                        <img src="img/05.png" />
+                        <p>Keyword Extraction Node 將傳進來訊息的關鍵字擷取並儲存到 Frame Node 裡，再將 Frame Node 所儲存的標準資料格式送至 Pull Service Node 所設定的外部服務進行處理，並將回傳的資料藉由 Message Node 轉為文字訊息回覆</p>
+                        <img src="img/02.png" />
+                        <p>外部服務可以藉由呼叫 Push Service Node 來傳遞資料並觸發後續串接的 Node。以上圖為例，Push Service Node 被呼叫時會將接收到的資料藉由 Message Node 轉為文字訊息送出至 Facebook 通訊平台</p>
+                    </div>
+                </div>
+                <!--/row-->
+            </div>
+            <!--/span-->
+
+            <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
+                <div class="list-group">
+                    <a href="index.html" class="list-group-item">IM Bridge</a>
+                    <a href="Message.html" class="list-group-item">Message</a>
+                    <a href="Dispatcher" class="list-group-item">Dispatcher</a>
+                    <a href="Keyword_Extraction.html" class="list-group-item">Keyword Extraction</a>
+                    <a href="Data_Collection.html" class="list-group-item">Data Collection</a>
+                    <a href="Frame.html" class="list-group-item">Frame</a>
+                    <a href="Service_Bridge.html" class="list-group-item active">Service Bridge</a>
+                </div>
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2017</p>
+        </footer>
+
+    </div>
+    <!--/.container-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.9.4/umd/popper.min.js" integrity="sha256-KTKnuJPRS70XKLm+ka+irprJFaz/MLZQKHIID7ECCmw="
+        crossorigin="anonymous"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="offcanvas.js"></script>
+</body>
+
+</html>
